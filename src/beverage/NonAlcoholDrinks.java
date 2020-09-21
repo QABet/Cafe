@@ -9,4 +9,15 @@ public class NonAlcoholDrinks extends Drink {
         this.sugarPercent = sugarPercent;
         this.sweeteners = sweeteners;
     }
+
+    @Override
+    public String toString() {
+        return "NonAlcoholDrinks{" +
+                "sugarPercent=" + sugarPercent +
+                ", sweeteners='" + sweeteners + '\'' +
+                ", name='" + name + '\'' +
+                ", volume=" + volume +
+                ", price=" + price +
+                '}';
+    }
 }
