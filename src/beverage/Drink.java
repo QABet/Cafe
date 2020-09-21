@@ -1,4 +1,4 @@
-package Beverage;
+package beverage;
 
 public abstract class Drink {
     protected String name;
