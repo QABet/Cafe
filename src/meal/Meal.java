@@ -16,4 +16,5 @@ public abstract class Meal {
     public float getPrice() {
         return price;
     }
+
 }
