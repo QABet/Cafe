@@ -1,11 +1,16 @@
 package ordering;
 
+import beverage.Drink;
 import meal.Meal;
+import staff.Barmen;
 import staff.Chef;
 
 public class Order implements Command{
     Chef chef;
     Meal meal;
+    Drink drink;
+    Barmen barmen;
+
 
     public Order(Chef chef, Meal meal) {
         this.chef = chef;
@@ -14,10 +19,10 @@ public class Order implements Command{
 
     @Override
     public void execute(){
-        if(this.meal.equals("Pizza")){
-            this.chef.cookPizza();
+        if(drink instanceof Drink){
+            this.barmen.prepareDrink();
         }else {
-            this.chef.serveOnThePlate();
+            System.out.println();
         }
     }
 }

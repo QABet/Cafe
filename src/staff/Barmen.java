@@ -1,19 +1,32 @@
 package staff;
 
-import beverage.alcoholCocktails.Mojito;
+import java.util.ArrayList;
+import java.util.List;
 
-public class Barmen extends Employee {
+public class Barmen  extends Employee {
 
-    public Barmen(String firstName, String lastName, int age, Gender gender, int employeeID, double salary) {
-        super(firstName, lastName, age, gender, employeeID, salary);
+
+    public Barmen(String firstName, String lastName, int age, Gender gender, int employeeID) {
+        super(firstName, lastName, age, gender, employeeID);
     }
 
-    public static void main(String[] args) {
-        Barmen barmen = new Barmen("Poghos", "Poghosyan", 22, Gender.MALE, 5, 200000);
-        barmen.makeCocktails();
+    List<Employee> employeeList = new ArrayList<>();
+
+    @Override
+    public void addEmployee(Employee employee){
+        employeeList.add(employeeID, employee);
     }
 
-    public void makeCocktails(){
-        System.out.println("Barmen makes " + new Mojito());
+    @Override
+    public void removeEmployee(Employee employee) {
+        employeeList.remove(employeeID);
     }
+
+    public void prepareDrink(){
+
+    }
+
+
+
+
 }

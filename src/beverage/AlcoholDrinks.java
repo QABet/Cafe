@@ -1,6 +1,6 @@
 package beverage;
 
-public abstract class AlcoholDrinks extends Drink {
+public class AlcoholDrinks extends Drink {
 
     protected float alcoholPercent;
 

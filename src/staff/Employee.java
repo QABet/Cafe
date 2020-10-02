@@ -1,20 +1,34 @@
 package staff;
 
+
 public abstract class Employee extends Person{
     protected int employeeID;
-    protected double salary;
 
-    public Employee(String firstName, String lastName, int age, Gender gender, int employeeID, double salary) {
+    public Employee(String firstName, String lastName, int age, Gender gender, int employeeID) {
         super(firstName, lastName, age, gender);
         this.employeeID = employeeID;
-        this.salary = salary;
+    }
+
+    public int getEmployeeID() {
+        return employeeID;
+    }
+
+    public void setEmployeeID(int employeeID) {
+        this.employeeID = employeeID;
+    }
+
+    public void addEmployee(Employee employee){
+
+    }
+
+    public void removeEmployee(Employee employee){
+
     }
 
     @Override
     public String toString() {
         return "Employee{" +
                 "employeeID=" + employeeID +
-                ", salary=" + salary +
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", age=" + age +
